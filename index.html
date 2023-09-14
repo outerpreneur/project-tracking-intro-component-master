@@ -28,9 +28,11 @@
             backgroundColor: {
               purple: "#E7ECF1",
               granite: "#242942",
+              bgorange: "#FF5E5E",
             },
             color: {
               granite: "#242942",
+              txpurple: "#E7ECF1",
             },
             fontFamily: {
               barlow: "Barlow Condensed",
@@ -62,16 +64,26 @@
       </div>
     </header>
     <main class="flex flex-col-reverse max-w-xs mx-auto mt-4">
-      <section class="mt-8">
-        <span class="rounded-xl uppercase bg-granite text-white p-1">New</span>
-        <span class="uppercase font-thin ml-2">Monograph Dashboard</span>
+      <section class="mt-8 flex flex-col gap-4">
+        <div>
+          <span class="rounded-xl uppercase bg-granite text-white p-1"
+            >New</span
+          >
+          <span class="uppercase font-thin ml-2">Monograph Dashboard</span>
+        </div>
 
-        <h1 class="uppercase text-2xl font-bold leading-6">
+        <h1 class="uppercase text-4xl font-bold leading-8">
           Powerful insights into your team
         </h1>
         <p>Project planning and time tracking for agile teams</p>
-        <button>Schedule a demo</button>
-        <span>to see a live preview</span>
+        <div>
+          <button
+            class="bg-bgorange py-2 px-4 rounded-lg text-white uppercase cursor-pointer"
+          >
+            Schedule a demo
+          </button>
+          <span class="uppercase text-txpurple">to see a live preview</span>
+        </div>
       </section>
       <section>
         <img src="./images/illustration-devices.svg" />
