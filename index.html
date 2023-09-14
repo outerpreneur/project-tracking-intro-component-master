@@ -48,7 +48,9 @@
   </head>
   <body class="h-full relative font-barlow">
     <header class="">
-      <div class="flex justify-between max-w-xs mx-auto py-8">
+      <div
+        class="flex justify-between max-w-xs mx-auto py-8 sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl"
+      >
         <img src="./images/logo.svg" />
         <nav class="hidden">
           <li>Product</li>
@@ -63,8 +65,10 @@
         </svg>
       </div>
     </header>
-    <main class="flex flex-col-reverse max-w-xs mx-auto mt-4">
-      <section class="mt-8 flex flex-col gap-4">
+    <main
+      class="flex flex-col-reverse max-w-xs mx-auto mt-4 sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:flex-row md:mt-40"
+    >
+      <section class="mt-8 flex flex-col gap-4 grow w-full">
         <div>
           <span class="rounded-xl uppercase bg-granite text-white p-1"
             >New</span
@@ -74,21 +78,24 @@
           >
         </div>
 
-        <h1 class="uppercase text-4xl font-bold leading-8">
+        <h1 class="uppercase text-4xl md:text-6xl font-bold leading-8">
           Powerful insights into your team
         </h1>
         <p>Project planning and time tracking for agile teams</p>
         <div>
           <button
-            class="bg-bgorange py-2 px-4 rounded-lg text-white uppercase cursor-pointer mr-3"
+            class="bg-bgorange py-2 px-4 rounded-lg text-white uppercase cursor-pointer mr-3 md:mt-10"
           >
             Schedule a demo
           </button>
           <span class="uppercase text-txpurple">to see a live preview</span>
         </div>
       </section>
-      <section>
-        <img src="./images/illustration-devices.svg" />
+      <section class="grow w-full overflow-auto">
+        <img
+          class="md:w-[915px] absolute"
+          src="./images/illustration-devices.svg"
+        />
       </section>
       <div
         class="bg-purple h-[425px] w-1/2 absolute top-0 right-0 -z-10 rounded-bl-[60px]"
