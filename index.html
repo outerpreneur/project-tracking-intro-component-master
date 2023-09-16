@@ -46,31 +46,54 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
-  <body class="h-full relative font-barlow">
+  <body class="h-full relative font-barlow overflow-hidden relative">
     <header class="">
       <div
-        class="flex justify-between max-w-xs mx-auto py-8 sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl"
+        class="flex justify-between max-w-xs mx-auto py-8 sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-7xl"
       >
         <img src="./images/logo.svg" />
-        <nav class="hidden">
-          <li>Product</li>
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Login</li>
+        <nav
+          class="hidden md:flex list-none gap-10 uppercase font-semibold text-lg items-center"
+        >
+          <li class="cursor-pointer">Product</li>
+          <li class="cursor-pointer">Features</li>
+          <li class="cursor-pointer">Pricing</li>
+          <div class="bg-[#242942] rounded-full w-2 h-2"></div>
+          <li class="text-[#242942] cursor-pointer">Login</li>
         </nav>
-        <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="16">
+        <svg
+          id="menu-opener"
+          class="md:hidden cursor-pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="16"
+        >
           <g fill="#242942" fill-rule="evenodd">
             <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
           </g>
         </svg>
       </div>
+      <div
+        id="mobile-menu"
+        class="w-[90%] absolute left-1/2 transform -translate-x-1/2 shadow-2xl hidden"
+      >
+        <nav
+          class="bg-white list-none p-6 flex flex-col gap-3 text-center uppercase font-semibold"
+        >
+          <li class="cursor-pointer">Product</li>
+          <li class="cursor-pointer">Features</li>
+          <li class="cursor-pointer">Pricing</li>
+          <hr />
+          <li class="text-[#242942] cursor-pointer">Login</li>
+        </nav>
+      </div>
     </header>
     <main
-      class="flex flex-col-reverse max-w-xs mx-auto mt-4 sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:flex-row md:mt-40"
+      class="flex flex-col-reverse max-w-xs mx-auto mt-4 sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-7xl md:flex-row md:mt-40"
     >
       <section class="mt-8 flex flex-col gap-4 grow w-full">
         <div>
-          <span class="rounded-xl uppercase bg-granite text-white p-1"
+          <span class="rounded-xl uppercase bg-granite text-white p-2"
             >New</span
           >
           <span class="uppercase font-thin ml-2 tracking-widest"
@@ -91,9 +114,9 @@
           <span class="uppercase text-txpurple">to see a live preview</span>
         </div>
       </section>
-      <section class="grow w-full overflow-auto">
+      <section class="grow w-full">
         <img
-          class="md:w-[915px] absolute"
+          class="md:w-[915px] md:absolute"
           src="./images/illustration-devices.svg"
         />
       </section>
@@ -102,4 +125,5 @@
       ></div>
     </main>
   </body>
+  <script src="app.js"></script>
 </html>
